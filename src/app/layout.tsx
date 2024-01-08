@@ -28,7 +28,7 @@ export default function RootLayout({
         <main className='font-normal'>
           <Header/>
           {children}
-          {/* ?Footer */}
+          <Footer/>
         </main>
         </body>
     </html>
