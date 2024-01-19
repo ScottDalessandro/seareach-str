@@ -13,10 +13,10 @@ const booking = {
             validation: Rule => Rule.required(),            
         }),
         defineField({
-            name: 'rentalProperty',
+            name: 'property',
             title: 'Rental Property',
             type: 'reference',
-            to: [{ type: 'rentalProperty'}],
+            to: [{ type: 'property'}],
             validation: Rule => Rule.required(),
         }),
         defineField({
