@@ -4,7 +4,36 @@ const review = {
     name: 'review',
     title: 'Review',
     type: 'document',
-    fields: [{
-        
-    }]
-}
+    fields: [
+      defineField({
+        name: 'user',
+        title: 'User',
+        type: 'reference',
+        to: [{ type: 'user' }],
+        validation: Rule => Rule.required(),
+      }),
+      defineField({
+        name: 'property',
+        title: 'Property',
+        type: 'reference',
+        to: [{ type: 'property' }],
+        validation: Rule => Rule.required(),
+      }),
+      defineField({
+        name: 'text',
+        title: 'Review Text',
+        type: 'text',
+        validation: Rule => Rule.required(),
+      }),
+      defineField({
+        name: 'userRating',
+        title: 'User Rating',
+        type: 'number',
+        validation: Rule =>
+          Rule.required().min(1).max(5).error('Rating must be between 1 and 5'),
+      }),
+    ],
+  };
+
+  export default review
+  
