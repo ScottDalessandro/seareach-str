@@ -1,5 +1,10 @@
 const Home = () => {
-  return <>Home</>
-}
+  return (
+    <>
+      Home
+      {/* Hero Section */}
+    </>
+  );
+};
 
-export default Home
+export default Home;
