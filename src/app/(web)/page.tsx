@@ -4,6 +4,8 @@ const Home = () => {
   return (
     <>
       <HeroSection />
+      {/* PAGE SEARCH */}
+      {/* Featured Room */}
     </>
   );
 };
